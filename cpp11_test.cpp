@@ -20,9 +20,9 @@ void process(void) {}
 template <typename Type, typename... Args>
 void process( Type&& type, Args&&... args )
 {
-    display( std::forward<Type&&>(type) );
+    display( std::forward<Type>(type) );
 
-    process( std::forward<Args&&>(args)... );
+    process( std::forward<Args>(args)... );
 }
 
 int main(int argc, char* argv[] )
